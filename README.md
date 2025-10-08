@@ -64,3 +64,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# JeeyCookie 
+
+A Laravel- Jeeycookie website.
+
+## Team Member
+
+- **Nama:** Latifah Fauzia
+- **NIM:** 2310120008
+
+## Week 03 Assignment
+
+This project was built as part of **Week 03 assignment** for the Web Programming course. It includes:
+
+- Blade templates for every route
+- Bootstrap styling
+- Responsive layout
+- Routes:
+  - `/` (Home)
+  - `/about`
+  - `/program`
+  - `/program/{id}`
+  - `/team`
+  - `/contact`
+  - `/404` fallback
+
+## GitHub Repository
+https://github.com/jiyyaaa25014/week03-assignment.git
