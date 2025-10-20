@@ -11,7 +11,7 @@
                 <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="{{ url('/program') }}" class="nav-link">Program</a></li>
-                <li class="nav-item"><a href="{{ url('/team') }}" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="{{ route('payment') }}" class="nav-link">Payment</a></li>
                 <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
             </ul>
         </div>
