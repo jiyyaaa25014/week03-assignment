@@ -20,7 +20,7 @@
             <div class="col-md-4 mb-4">
                 <h5>Contact Us</h5>
                 <p>Email: Jeeycookie@12.com</p>
-                <p>Phone: +62 812-3456-7890</p>
+                <p>Phone: +62 85210567503</p>
                 <p>Address: Bandung, Indonesia</p>
             </div>
 
