@@ -21,14 +21,14 @@
 
 ---
 
-# 🍪 JeeyCookie — Laravel Web App
+# JeeyCookie — Laravel Web App
 
 JeeyCookie adalah website toko kue modern berbasis **Laravel Framework** yang menampilkan informasi produk, promosi, dan metode pembayaran.  
-Dibuat sebagai bagian dari **Asessment 1** untuk mata kuliah *Web Programming*.
+Dibuat sebagai bagian dari **Asessment 1** untuk mata kuliah *Web framework*.
 
 ---
 
-## 👩‍💻 Team Member
+## Team Member
 | Nama | NIM |
 |------|--------|
 | **Latifah Fauzia** | 2310120008 |
@@ -37,18 +37,18 @@ Dibuat sebagai bagian dari **Asessment 1** untuk mata kuliah *Web Programming*.
 
 ---
 
-## 📚 Fitur Utama
+## Fitur Utama
 
-- 🏠 **Home Page** – Tampilan utama dengan banner & highlight produk.  
-- 🍪 **About Page** – Profil JeeyCookie dan nilai usaha.  
-- 🧁 **Program Page** – Halaman dinamis `/program/{id}` untuk menampilkan event atau promo.  
-- 💳 **Payment Page** – Metode pembayaran via Bank Jago dan QRIS.  
-- 💬 **Contact Page** – Form kontak dengan pengiriman data ke controller.  
-- ⚠️ **404 Page** – Fallback route untuk halaman yang tidak ditemukan.  
+- **Home Page** – Tampilan utama dengan banner & highlight produk.  
+- **About Page** – Profil JeeyCookie dan nilai usaha.  
+- **Program Page** – Halaman dinamis `/program/{id}` untuk menampilkan event atau promo.  
+- **Payment Page** – Metode pembayaran via Bank Jago dan QRIS.  
+- **Contact Page** – Form kontak dengan pengiriman data ke controller.  
+- **404 Page** – Fallback route untuk halaman yang tidak ditemukan.  
 
 ---
 
-## ⚙️ Komponen Laravel
+## Komponen Laravel
 
 | Komponen | Implementasi |
 |-----------|---------------|
@@ -60,7 +60,7 @@ Dibuat sebagai bagian dari **Asessment 1** untuk mata kuliah *Web Programming*.
 
 ---
 
-## 🧱 Struktur Folder
+## Struktur Folder
 jeeycookie/
 ├── app/Http/Controllers/ContactController.php
 ├── resources/
