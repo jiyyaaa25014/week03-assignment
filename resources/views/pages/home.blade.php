@@ -3,19 +3,20 @@
 @section('title', 'Home')
 
 @section('content')
-{{-- Hero / banner --}}
-<section class="hero-section text-center">
+
+{{-- Hero / Banner --}}
+<section class="hero-section text-center d-flex align-items-center justify-content-center" style="min-height: 70vh;">
     <div class="container">
-        <h1>Jeeycookie Homade baked</h1>
-        <p>Fresh breads & sweet treats baked daily with love.</p>
-        <a href="#products" class="btn btn-primary mt-3">Shop Now</a>
+        <h1 class="fw-bold" style="color: var(--color-light);">Jeeycookie Homemade Baked</h1>
+        <p class="lead" style="color: var(--color-light);">Fresh breads & sweet treats baked daily with love.</p>
+        <a href="#products" class="btn mt-3 px-4 py-2" style="background-color: var(--color-primary); color: #fff;">Shop Now</a>
     </div>
 </section>
 
-{{-- Kategori --}}
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-4">Kategori Produk</h2>
+{{-- Kategori Produk --}}
+<section class="py-5" style="background-color: var(--color-light);">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4" style="color: var(--color-dark);">Kategori Produk</h2>
         <div class="row">
             @foreach ([
             ['name' => 'Soes Jadoel', 'img' => 'Soes jadoel.jpg'],
@@ -24,10 +25,8 @@
             ['name' => 'Cake', 'img' => 'cake.jpg'],
             ] as $cat)
             <div class="col-6 col-md-3 mb-4">
-                <div class="card category-card text-center p-3">
-                    <img src="{{ asset('images/' . $cat['img']) }}"
-                        class="img-fluid rounded mb-2"
-                        alt="{{ $cat['name'] }}">
+                <div class="card category-card text-center">
+                    <img src="{{ asset('images/' . $cat['img']) }}" class="img-fluid rounded mb-2" alt="{{ $cat['name'] }}">
                     <h5>{{ $cat['name'] }}</h5>
                 </div>
             </div>
@@ -37,10 +36,10 @@
 </section>
 
 {{-- Trending Products --}}
-<section id="products" class="py-5 bg-light">
+<section id="products" class="py-5">
     <div class="container">
-        <h2 class="mb-4">Trending Products</h2>
-        <div class="row">
+        <h2 class="fw-bold mb-4 text-center" style="color: var(--color-dark);">Trending Products</h2>
+        <div class="row justify-content-center">
             @foreach ([
             ['name' => 'Soes Jadoel', 'img' => 'Soes jadoel.jpg', 'price' => 30000],
             ['name' => 'Donat', 'img' => 'Dounat.jpg', 'price' => 5000],
@@ -49,13 +48,13 @@
             ] as $product)
             <div class="col-md-3 mb-4">
                 <div class="card product-card h-100">
-                    <img src="{{ asset('images/' . $product['img']) }}"
-                        class="card-img-top"
-                        alt="{{ $product['name'] }}">
+                    <img src="{{ asset('images/' . $product['img']) }}" class="card-img-top" alt="{{ $product['name'] }}">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ $product['name'] }}</h5>
-                        <p class="card-text">Rp {{ number_format($product['price'], 0, ',', '.') }}</p>
-                        <a href="#" class="btn btn-outline-secondary btn-sm">View</a>
+                        <p class="card-text" style="color: var(--color-accent); font-weight:600;">
+                            Rp {{ number_format($product['price'], 0, ',', '.') }}
+                        </p>
+                        <a href="#" class="btn btn-sm" style="background-color: var(--color-primary); color:#fff;">View</a>
                     </div>
                 </div>
             </div>
@@ -64,16 +63,16 @@
     </div>
 </section>
 
-{{-- Testimonial / Review --}}
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-4">What Our Customers Say</h2>
-        <div class="row">
+{{-- Testimonial --}}
+<section class="py-5" style="background-color: var(--color-light);">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4" style="color: var(--color-dark);">What Our Customers Say</h2>
+        <div class="row justify-content-center">
             @for ($i = 1; $i <= 3; $i++)
                 <div class="col-md-4 mb-4">
-                <div class="card testimonial p-4 h-100">
-                    <p>"The bread is so fresh and the flavor is amazing. Highly recommend!"</p>
-                    <h6>Customer {{ $i }}</h6>
+                <div class="card testimonial p-4 h-100 shadow-sm">
+                    <p class="mb-3">“The bread is so fresh and the flavor is amazing. Highly recommend!”</p>
+                    <h6 class="fw-semibold" style="color: var(--color-primary);">Customer {{ $i }}</h6>
                 </div>
         </div>
         @endfor
@@ -82,57 +81,38 @@
 </section>
 
 {{-- Recent News / Blog --}}
-<section class="py-5 bg-light">
+<section class="py-5">
     <div class="container">
-        <h2 class="mb-4">Recent News</h2>
+        <h2 class="fw-bold mb-4 text-center" style="color: var(--color-dark);">Recent News</h2>
         <div class="row">
-            {{-- Post 1 --}}
+            @foreach ([
+            [
+            'title' => 'Promo Bundling Donat — 2 Box cuma Rp26.000!',
+            'img' => 'Dounat.jpg',
+            'desc' => 'Spesial minggu ini! Nikmati promo bundling donat manis kami. Beli 2 box hanya Rp26.000 aja 😋. Cocok buat teman ngopi atau cemilan sore bareng keluarga.'
+            ],
+            [
+            'title' => 'Varian Baru! Soes Jadoel Rasa Coklat 🍫',
+            'img' => 'Soes jadoel.jpg',
+            'desc' => 'Buat kamu pecinta coklat, sekarang Soes Jadoel hadir dengan varian rasa baru — isi coklat lumer yang bikin nagih! Tekstur lembut di luar, manis pas di lidah.'
+            ],
+            [
+            'title' => 'Introducing Our New Cookies Variant 🍪',
+            'img' => 'cookies.jpg',
+            'desc' => 'Kami punya varian cookies terbaru — renyah di luar, lembut di dalam! Coklat chip-nya melimpah, cocok untuk kamu yang suka manis tapi tetap ringan.'
+            ],
+            ] as $post)
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="{{ asset('images/Dounat.jpg') }}" class="card-img-top" alt="Promo Bundling Donat">
+                    <img src="{{ asset('images/' . $post['img']) }}" class="card-img-top" alt="{{ $post['title'] }}">
                     <div class="card-body">
-                        <h5 class="card-title">Promo Bundling Donat — 2 Box cuma Rp26.000!</h5>
-                        <p class="card-text">
-                            Spesial minggu ini! Nikmati promo bundling donat manis kami.
-                            Beli 2 box hanya Rp26.000 aja 😋.
-                            Cocok buat teman ngopi atau cemilan sore bareng keluarga.
-                        </p>
-                        <a href="#" class="text-decoration-none fw-semibold">Read More →</a>
+                        <h5 class="card-title" style="color: var(--color-dark);">{{ $post['title'] }}</h5>
+                        <p class="card-text">{{ $post['desc'] }}</p>
+                        <a href="#" class="fw-semibold" style="color: var(--color-primary); text-decoration: none;">Read More →</a>
                     </div>
                 </div>
             </div>
-
-            {{-- Post 2 --}}
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="{{ asset('images/Soes jadoel.jpg') }}" class="card-img-top" alt="Varian Baru Soes Jadoel Coklat">
-                    <div class="card-body">
-                        <h5 class="card-title">Varian Baru! Soes Jadoel Rasa Coklat 🍫</h5>
-                        <p class="card-text">
-                            Buat kamu pecinta coklat, sekarang Soes Jadoel hadir
-                            dengan varian rasa baru — isi coklat lumer yang bikin nagih!
-                            Tekstur lembut di luar, manis pas di lidah.
-                        </p>
-                        <a href="#" class="text-decoration-none fw-semibold">Read More →</a>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Post 3 --}}
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="{{ asset('images/cookies.jpg') }}" class="card-img-top" alt="New Cookies Variant">
-                    <div class="card-body">
-                        <h5 class="card-title">Introducing Our New Cookies Variant 🍪</h5>
-                        <p class="card-text">
-                            Kami punya varian cookies terbaru — renyah di luar,
-                            lembut di dalam!
-                            Coklat chip-nya melimpah, cocok untuk kamu yang suka manis tapi tetap ringan.
-                        </p>
-                        <a href="#" class="text-decoration-none fw-semibold">Read More →</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
